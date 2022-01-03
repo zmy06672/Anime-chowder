@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/ciyuanzhai.css">
+</head>
+<body>
+    <header>
+        <div>
+            <img src="./images/logo3.png" alt="" style="width: 50px;">
+            <ul>
+                <li>
+                    <a href="./index.html">首页</a>
+                </li>
+                <li>
+                    <a href="./xiangcejijin.html">相册集锦</a>
+                </li>
+                <li>
+                    <a href="./ciyuanzhai.html">次元宅</a>
+                </li>
+                <li>
+                    <a href="./guanyu.html">关于</a>
+                </li>
+                <li><a href="./gengduo.html">更多</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class='container_top'>
+        <div style="width: 30px;height:50px;position: absolute;left: 0px;top:22%;z-index: 1;" onclick='shangyiye()'><img src="./images/shangyiye.png" alt="" style="width: 30px;height:50px;"></div>
+        <div style="position: absolute;overflow: hidden;" class="imgbox">
+            <img class='images' src="./images/狐妖小红娘.jfif" alt="">
+            <img class='images' src="./images/圣痕炼金士.jfif" alt="">
+            <img class='images' src="./images/此花亭奇谈.jfif" alt="">
+            <img class='images' src="./images/犬夜叉.jfif" alt="">
+            <img class='images' src="./images/此花亭奇谈.jfif" alt="">
+            <img class='images' src="./images/犬夜叉.jfif" alt="">
+            <img class='images' src="./images/狐妖小红娘.jfif" alt="">
+            <img class='images' src="./images/狐妖小红娘.jfif" alt="">
+            <img class='images' src="./images/狐妖小红娘.jfif" alt="">
+        </div>
+        <div style="width: 30px;height:50px;position: absolute; right:0px;top:22%;z-index: 1;" onclick='xiayiye()'><img src="./images/xiayiye.png" alt="" style="width: 30px;height:50px;"></div>
+    </div>
+    <div class="container">
+        <img src="./images/狐妖小红娘.jfif" alt="" class="bigimg">
+    </div>
+    <footer>
+        <div>
+			<div class="bottom-left">
+				<h5>关于次元网</h5>
+				<p><a href="">关于</a></p>
+				<p><a href="">用户管理</a></p>
+				<p><a href="">工作机会</a></p>
+				<p><a href="">客户服务</a></p>
+				<p><a href="">帮助</a></p>
+			</div>
+			<div class="bottom-center">
+				<h5>新手指南</h5>
+				<p><a href="">如何注册</a></p>
+				<p><a href="">如何登录</a></p>
+				<p><a href="">查看分类</a></p>
+			</div>
+			<div class="bottom-right">
+				<h5>合作伙伴</h5>
+				<p><a href="">合作机构</a></p>
+				<p><a href="">合作大厂</a></p>
+			</div>
+		</div>
+    </footer>
+</body>
+<script>
+    let images = document.getElementsByClassName('images');
+    let bigimg = document.getElementsByClassName('bigimg')[0];
+    let imgbox = document.getElementsByClassName('imgbox')[0];
+    imgbox.style.left = '0px';
+    let totalWidth = 0;
+    for(var i=0;i<images.length;i++){
+        images[i].onclick = function (){
+            bigimg.setAttribute('src',this.getAttribute('src'))
+        }
+    }
+    
+    console.log(totalWidth)
+    function shangyiye(){
+        console.log(imgbox.style.left)
+        if(parseFloat(imgbox.style.left.replace('px',''))+1080<=0){
+            imgbox.style.left = (parseFloat(imgbox.style.left.replace("px", "")) + 1080) + "px";
+        }else{
+            imgbox.style.left = '0px';
+        }
+    }
+    
+    function xiayiye(){
+        if((imgbox.clientWidth+parseFloat(imgbox.style.left.replace("px", ""))-1080) >=document.body.clientWidth){
+            
+            imgbox.style.left = (parseFloat(imgbox.style.left.replace("px", "")) - 1080) + "px";
+            
+        }else{
+            imgbox.style.left = -(imgbox.clientWidth-document.body.clientWidth) + "px";
+        }
+        
+    }
+
+
+</script>
+</html>

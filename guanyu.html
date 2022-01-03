@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <header>
+        <div>
+            <img src="./images/logo.png" alt="" style="width: 50px;">
+            <ul>
+                <li>
+                    <a href="./index.html">首页</a>
+                </li>
+                <li>
+                    <a href="./xiangcejijin.html">相册集锦</a>
+                </li>
+                <li>
+                    <a href="./ciyuanzhai.html">次元宅</a>
+                </li>
+                <li>
+                    <a href="./guanyu.html">关于</a>
+                </li>
+                <li><a href="./gengduo.html">更多</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class='container' style="position: relative;">
+        <div style="display: inline-block;width: 100px;top:30px">
+            <ul>
+                <li class="li" style="color: whitesmoke;line-height:50px;text-align:center;border-bottom:1px solid rgba(177, 177, 177, 0.782);font-weight: bold;height:50px;margin-bottom: 0px;background-color:turquoise;">关于我们</li>
+                <li class="li" style="color: whitesmoke;line-height:50px;text-align:center;border-bottom:1px solid rgba(177, 177, 177, 0.782);font-weight: bold;height:50px;margin-bottom: 0px;background-color:thistle;">帮助</li>
+                <li class="li" style="color: whitesmoke;line-height:50px;text-align:center;border-bottom:1px solid rgba(177, 177, 177, 0.782);font-weight: bold;height:50px;margin-bottom: 0px;background-color:thistle;">反馈中心</li>
+            </ul>
+        </div>
+        <div class="con" style='display:inline-block;width: 800px;margin: 0 auto;background-color: rgba(74, 74, 74, 0.694);height: 600px;color: whitesmoke;font-weight: bold;'>
+            <div>
+                凌空动漫网为您提供一站式ACG服务新体验。动漫资讯、展会信息、宅文化、周边情报，活动情报一网打尽，致力于打造有趣的动漫交流平台。
+                版权申明：本站资讯情报由注册用户发布，本网站无法鉴别所上传图片或文字的知识版权，任何单位或个人认为本网站中的网页或链接内容可能
+                涉嫌侵犯其知识产权，应该及时向本网站提出书面权利通知，并提供身份证明、权属证明及详细侵权情况证明。本网站在收到上述文件后，将会
+                尽快删除相关内容或断开相关链接。
+            </div>
+        </div>
+        <div class="con" style='display:none;width: 800px;margin: 0 auto;background-color: rgba(74, 74, 74, 0.694);height: 600px;color: whitesmoke;font-weight: bold;'>
+            <form action="">
+                <textarea name="" id="" cols="30" rows="10" placeholder="请写下需要哪些帮助" style="width: 100%;height:100px"></textarea>
+                <button style="margin:0 auto;display: block;">提交</button>
+            </form>
+        </div>
+        <div class="con" style='display:none;width: 800px;margin: 0 auto;background-color: rgba(74, 74, 74, 0.694);height: 600px;color: whitesmoke;font-weight: bold;'>
+            <form action="" style="text-align: center;">
+                <textarea name="" placeholder="请写下您的不满以便我们进行改进" id="" cols="30" rows="10" style="width: 100%;height:100px"></textarea>
+                <button style="margin:0 auto;display: block;">提交</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div>
+			<div class="bottom-left">
+				<h5>关于次元网</h5>
+				<p><a href="">关于</a></p>
+				<p><a href="">用户管理</a></p>
+				<p><a href="">工作机会</a></p>
+				<p><a href="">客户服务</a></p>
+				<p><a href="">帮助</a></p>
+			</div>
+			<div class="bottom-center">
+				<h5>新手指南</h5>
+				<p><a href="">如何注册</a></p>
+				<p><a href="">如何登录</a></p>
+				<p><a href="">查看分类</a></p>
+			</div>
+			<div class="bottom-right">
+				<h5>合作伙伴</h5>
+				<p><a href="">合作机构</a></p>
+				<p><a href="">合作大厂</a></p>
+			</div>
+		</div>
+    </footer>
+</body>
+<script>
+    var lis = document.getElementsByClassName('li');
+    var con = document.getElementsByClassName('con');
+    lis[0].onclick = function(){
+        lis[0].style.backgroundColor = 'turquoise'
+        lis[1].style.backgroundColor = 'thistle'
+        lis[2].style.backgroundColor = 'thistle'
+        con[0].style.display = 'inline-block'
+        con[1].style.display = 'none'
+        con[2].style.display = 'none'
+    }
+    lis[1].onclick = function(){
+        lis[1].style.backgroundColor = 'turquoise'
+        lis[2].style.backgroundColor = 'thistle'
+        lis[0].style.backgroundColor = 'thistle'
+        con[1].style.display = 'inline-block'
+        con[0].style.display = 'none'
+        con[2].style.display = 'none'
+    }
+    lis[2].onclick = function(){
+        lis[2].style.backgroundColor = 'turquoise'
+        lis[1].style.backgroundColor = 'thistle'
+        lis[0].style.backgroundColor = 'thistle'
+        con[2].style.display = 'inline-block'
+        con[1].style.display = 'none'
+        con[0].style.display = 'none'
+    }
+</script>
+</html>

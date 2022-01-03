@@ -1,0 +1,141 @@
+body{
+    background: url(../images/background.jpg);
+    background-attachment: fixed;
+    width: 100%;
+}
+header{
+    width: 100%;
+    height:50px;
+    background-color: rgba(255, 255, 255, 0.356);
+    background-attachment: fixed;
+}
+header>div{
+    width:1080px;
+    display: flex;
+    margin: 0 auto;
+    vertical-align: middle;
+}
+header>div>img{
+    height:50px;
+    vertical-align: middle;
+}
+header>div>ul{
+    display: flex;
+    vertical-align: middle;
+}
+header>div li{
+    width:100px
+}
+header>div>div{
+    float: right;
+    width:500px;
+}
+header>div>div>div{
+    display: inline;
+    width: 120px;
+}
+header a{
+    height: 50px;
+    display: block;
+    line-height: 50px;
+}
+.container{
+    width: 1080px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.left{
+    width: 730px;
+}
+.left>div{
+    position: relative;
+}
+.left img{
+    width: 100%;
+}
+.left p{
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 0%;
+    font-weight: bolder;
+    text-align: left;
+    letter-spacing:5px;
+    background-color: rgba(255, 255, 255, 0.856);
+}
+.right{
+    width:300px;
+    float: right;
+}
+.right>div{
+    position: relative;
+}
+.right img{
+    width: 100%;
+}
+.right a:nth-child(1){
+    height: 168px;
+}
+.right>div:nth-child(2){
+    margin-top: 35px;
+}
+.right a:nth-child(2){
+    height: 180px;
+}
+.right>div p{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    bottom: 0px;
+    text-align: left;
+    font-weight: bold;
+    letter-spacing:3px;
+    background-color:rgba(245, 245, 245, 0.829) ;
+}
+.other_dongman{
+    width:1080px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.other_dongman>div{
+    width:300px;
+    position: relative;
+}
+.other_dongman img{
+    width: 300px;
+}
+.other_dongman p{
+    width: 290px;
+    position: absolute;
+    bottom:0px;
+    letter-spacing: 3px;
+    background-color: rgba(255, 255, 255, 0.788);
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+}
+footer{
+    width: 100%;
+    margin-top: 30px;
+    background-color: rgba(46, 45, 45, 0.712);
+}
+footer>div{
+    padding-top: 20px;
+    width: 1080px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+    font-size: 15px;
+    color:white;
+}
+footer a{
+    color: white;
+}
+footer h5{
+    font-size: 20px;
+}
